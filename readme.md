@@ -6,7 +6,7 @@ A comprehensive guide to building a Line Chat Bot from scratch, integrating vari
 ---
 
 ### Table of Contents
-1. [Line Developer 101](#line-dev-101)
+1. [Line Developer 101](./line-dev-101/)
 2. [Rich Menu and Line Message Types](#rich-menu-and-line-message-types)
 3. [Storing Chat Data with MongoDB](#storing-chat-data-with-mongodb)
 4. [Web Development 101](#web-development-101)
