@@ -23,13 +23,23 @@ To stop the API, press `Ctrl + C` in the terminal where the API is running.
 
 ---
 
-## API Example
+## Webhook Example
 Example API concept.
 
+### Configuration
+Before running the API, make sure to update your Line access token and channel secret in the code. Locate the following configuration lines in `webhook.py` and replace them with your own values:
+
+```python
+configuration = Configuration(access_token='Your_Channel_Access_Token')
+handler = WebhookHandler(channel_secret='Your_Channel_Secret')
+```
+
+Replace `'Your_Channel_Access_Token'` and `'Your_Channel_Secret'` with your actual Line channel access token and channel secret, respectively.
+
 ### Run
-1. Navigate to the project directory:
+1. Run API using fastapi cli
    ```bash
-   cd line-dev-101
+   fastapi dev webhook.py
    ```
 
 2. Run API using fastapi cli
@@ -37,14 +47,13 @@ Example API concept.
    fastapi dev webhook.py
    ```
 
-3. Run API using fastapi cli
-   ```bash
-   fastapi dev webhook.py
-   ```
-
-4. Deploy your webhook online
+3. Deploy your webhook online
+   Open a new Terminal and run this command
    ```bash
    ngrok http http://localhost:8080
    ```
 
-To stop the API and Ngrok, press `Ctrl + C` in the terminal where the API and Ngrok is running.
+   Copy the HTTPS link provided by ngrok (e.g., `https://your-ngrok-id.ngrok.io`), add `/webhook` at the end, and paste the full URL into the **Webhook URL** field in the [Line Developer Console](https://developers.line.biz/console/). This setup enables Line to send events to your local server via the secure tunnel created by ngrok.
+
+
+To stop the Webhook and Ngrok, press `Ctrl + C` in the terminal where the Webhook and Ngrok is running.
