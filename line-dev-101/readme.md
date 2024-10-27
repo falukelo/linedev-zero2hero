@@ -1,6 +1,4 @@
-# Line Chat Bot: Zero to Hero
-
-## Line Developer 101
+# Line Developer 101
 An introduction to developing with the Line Messaging API, covering essential tools and setup for creating a Line Official Account (OA), generating tokens, and building a webhook with FastAPI. This section provides the foundational steps to connect and manage your bot with the Line platform.
 
 ## Presentation
