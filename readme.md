@@ -6,7 +6,7 @@ A comprehensive guide to building a Line Chat Bot from scratch, integrating vari
 ---
 
 ### Table of Contents
-1. [Line Developer 101](#line-developer-101)
+1. [Line Developer 101](#line-dev-101)
 2. [Rich Menu and Line Message Types](#rich-menu-and-line-message-types)
 3. [Storing Chat Data with MongoDB](#storing-chat-data-with-mongodb)
 4. [Web Development 101](#web-development-101)
@@ -66,12 +66,17 @@ A comprehensive guide to building a Line Chat Bot from scratch, integrating vari
 ---
 
 ## Prerequisites
-- **Python 3.9+**
 - **MongoDB**
+- **Python 3.13**
 - **Line Developer Account**
+- **Ngrok**
+- **Postman**
+- **GCP Account**
+- **MongoDB Atlas**
+- **GCP Account**
 - **Docker**
 - **Power BI Desktop**
 
 ## Clone the Repository
    ```bash
-   git clone https://github.com/your-username/line-chat-bot-zero-to-hero.git
+   git clone https://github.com/falukelo/linedev-zero2hero.git
