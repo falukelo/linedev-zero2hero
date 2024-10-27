@@ -77,6 +77,56 @@ A comprehensive guide to building a Line Chat Bot from scratch, integrating vari
 - **Docker**
 - **Power BI Desktop**
 
-## Clone the Repository
+## Installation
+
+### Clone the Repository
+1. Clone the repository:
    ```bash
    git clone https://github.com/falukelo/linedev-zero2hero.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd line-chat-bot-zero-to-hero
+   ```
+
+### Install required dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Installing ngrok
+
+**ngrok** is essential for creating a secure tunnel to test the webhook locally with Line's platform.
+
+#### Windows
+1. Go to the [ngrok download page](https://ngrok.com/download).
+2. Download the **Windows** version.
+3. Extract the downloaded file and move `ngrok.exe` to a preferred location, such as `C:\ngrok`.
+4. Add ngrok to your PATH:
+   - Open the **Command Prompt** as an administrator.
+   - Run the following command to add ngrok to the PATH:
+     ```cmd
+     setx PATH "%PATH%;C:\ngrok"
+     ```
+5. Verify the installation by running:
+   ```cmd
+   ngrok --version
+   ```
+
+#### macOS
+1. Open your terminal.
+2. Install ngrok using Homebrew (if Homebrew is not installed, follow the instructions [here](https://brew.sh/)):
+   ```bash
+   brew install ngrok/ngrok/ngrok
+   ```
+3. Verify the installation:
+   ```bash
+   ngrok --version
+   ```
+
+### Add your Ngrok authentication token
+Run the following command to add your authtoken to the default ngrok.yml:
+   ```bash
+   ngrok config add-authtoken <Your_Ngrok_token>
+   ```
