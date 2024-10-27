@@ -3,13 +3,15 @@
 ## Line Developer 101
 An introduction to developing with the Line Messaging API, covering essential tools and setup for creating a Line Official Account (OA), generating tokens, and building a webhook with FastAPI. This section provides the foundational steps to connect and manage your bot with the Line platform.
 
+## Presentation
+For a detailed presentation on this project, please refer to the [Canva presentation](https://www.canva.com/design/DAGUsXVCExs/APba5pNI2hQmac9oW5kLGw/view?utm_content=DAGUsXVCExs&utm_campaign=designshare&utm_medium=link&utm_source=editor).
 ---
 
 ## API Example
 Example API concept.
 
 ### Run
-1. Navigate to the project directory:
+1. Navigate to the directory:
    ```bash
    cd line-dev-101
    ```
@@ -24,7 +26,7 @@ To stop the API, press `Ctrl + C` in the terminal where the API is running.
 ---
 
 ## Webhook Example
-Example API concept.
+Example Webhook for Line Chatbot.
 
 ### Configuration
 Before running the API, make sure to update your Line access token and channel secret in the code. Locate the following configuration lines in `webhook.py` and replace them with your own values:
