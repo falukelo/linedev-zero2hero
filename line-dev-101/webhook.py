@@ -7,8 +7,8 @@ from linebot.v3.webhooks import MessageEvent, TextMessageContent, StickerMessage
 app = FastAPI()
 
 # Initialize Line Bot API and Handler with your Channel Access Token and Channel Secret
-configuration = Configuration(access_token='Your_Channel_Access_Token')
-handler = WebhookHandler(channel_secret='Your_Channel_Secret')
+configuration = Configuration(access_token='44ub+Pztj0Xlk3zluS0vBTVdxlydxb1DqqNw/wU96NGnMxJ0B5IYqzujzywwiQ/Wi3MD7tYhwB9kc/LGXbXpMAUyQU3/gJ4k3Une3yMvSw/fw5jS6jlsdJJAvSIvtQ39hfrOTZF7jpsjTFW7MLi/bgdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler(channel_secret='2e8dfc9b508bbff98b5f5c48433d9363')
 
 @app.post("/webhook")
 async def webhook(request: Request):
@@ -27,6 +27,7 @@ async def webhook(request: Request):
 def handle_message(event):
     with ApiClient(configuration) as api_client:
         line_bot_api = MessagingApi(api_client)
+        print(event)
         if event.message.text == "สวัสดี":
             reply_text = "สวัสดีครับ"
         else:
