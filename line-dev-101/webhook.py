@@ -1,10 +1,13 @@
 from fastapi import FastAPI, Request, HTTPException
+from fastapi.staticfiles import StaticFiles
 from linebot.v3 import WebhookHandler
 from linebot.v3.messaging import Configuration, ApiClient, MessagingApi
 from linebot.v3.messaging import ReplyMessageRequest, TextMessage, StickerMessage
 from linebot.v3.webhooks import MessageEvent, TextMessageContent, StickerMessageContent
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Initialize Line Bot API and Handler with your Channel Access Token and Channel Secret
 configuration = Configuration(access_token='44ub+Pztj0Xlk3zluS0vBTVdxlydxb1DqqNw/wU96NGnMxJ0B5IYqzujzywwiQ/Wi3MD7tYhwB9kc/LGXbXpMAUyQU3/gJ4k3Une3yMvSw/fw5jS6jlsdJJAvSIvtQ39hfrOTZF7jpsjTFW7MLi/bgdB04t89/1O/w1cDnyilFU=')
