@@ -25,9 +25,9 @@ async def webhook(request: Request):
 
 @handler.add(MessageEvent, message=TextMessageContent)
 def handle_message(event):
+    print(event)
     with ApiClient(configuration) as api_client:
         line_bot_api = MessagingApi(api_client)
-        print(event)
         if event.message.text == "สวัสดี":
             reply_text = "สวัสดีครับ"
         else:
